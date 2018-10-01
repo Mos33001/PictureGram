@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Picturegram</title>
+	<style type="text/css">
+				body{
+					background-color: #9effd1;
+					}
+				*{
+					box-sizing: border-box;
+				}
+
+				h1{
+					font-family: cursive;
+					color:#3b00ff;
+					background:#ffdbfa;
+					}
+
+				img{
+					width: 200px;
+					height: auto;
+					border:4px solid turquoise;
+					}
+				#Mainpic{
+						width:100%;
+						height:auto;
+						}
+				.smallpic{
+						width: 40%;
+						height:auto;
+						margin:10px;
+						}
+				img:hover{
+					border: 5px solid blue;
+					cursor: pointer;
+				}
+
+				#All_Pics{
+					width: 650px;
+					margin: auto;
+					text-align: center;
+				}
+
+	</style>
+</head>
+<body>
+ <div id="All_Pics">
+<h1> <center> Picturegram</h1></center>
+
+<img src="https://www.dogster.com/wp-content/uploads/2017/04/Kevin-Sarasom1.jpg" id="Mainpic" class="Smallpic">
+<img src="https://images.boredomfiles.com/wp-content/uploads/sites/5/2016/01/09-derpy-dogs.jpg" class="Smallpic">
+<img src="https://i.chzbgr.com/full/7185517824/h78CD7606/" class="Smallpic">
+<img src="http://uberhumor.com/wp-content/uploads/2012/09/awesome-derpy-dogs-08.jpg" class="Smallpic" >
+<img src="https://i.pinimg.com/236x/6f/4e/59/6f4e5973e6d7f73f6d2d46793181c969--cute-funny-animals-cutest-animals.jpg" class="Smallpic">
+<img src="https://exoticanimalsupplies.com/wp-content/uploads/2018/01/male-ferret-names.jpg" class="Smallpic">
+<img src="http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg" class="Smallpic">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYuPmbd5jVOQQHN9ALtOtcRmWZ983I1ssH-VPLYuu3aKgUBSCGWQ" class="Smallpic">
+<img src="https://78.media.tumblr.com/6f7b32eded32696a0cf8c01c9e86df42/tumblr_oet4ylYd6t1r9md4ao1_400.gif" class="Smallpic">
+<img src="http://cdn.playbuzz.com/cdn/UserImages/e71b38d5-3313-4e62-8251-34e3c88f227e.jpg" class="Smallpic">
+<img src="https://78.media.tumblr.com/2c5dfe5d9844684e5f18fbecc7d4a445/tumblr_inline_p8d7wx5kB51r1hbh6_540.jpg" class="Smallpic">
+<img src="http://i.imgur.com/01JV2iX.jpg" class="Smallpic">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzVLXngDNywH3j1Rd9YJeFmUcauXBK5rAuxbSdVMAHOM7hYvm3" class="Smallpic">
+<img src="https://data.whicdn.com/images/160559754/large.jpg" class="Smallpic">
+<img src="https://i.pinimg.com/originals/4d/a3/64/4da3640cf191d012fe1bfd1eb8120961.jpg" class="Smallpic">
+<img src="https://assets.blog.slice.ca/imageserve/wp-content/uploads/sites/5/2014/12/a6a6664bf4abeb9d527de40bb66749ae/x.jpg" class="Smallpic">
+<img src="http://cdn.ebaumsworld.com/mediaFiles/picture/2365628/84174220.jpg" class="Smallpic">
+</div>
+</body>
+<script type="text/javascript">
+		const bigImage = document.querySelector("#Mainpic");
+		const images = document.querySelectorAll(".Smallpic");
+
+		images.forEach(image => image.addEventListener("click", 
+			function(e) {
+				let clickedImage = e.target.src;
+				let swapImage = bigImage.src;
+				bigImage.src = clickedImage;
+				e.target.src = swapImage;
+			}
+			));
+	</script>
+
+</html>
